@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="手工搭建你的神经网络_.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:手工搭建你的神经网络_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+	<NavigationView x:Name="工具箱" IsSettingsVisible="False">
+		<NavigationView.MenuItems>
+			<NavigationViewItem Content="移动" Icon="TouchPointer"/>
+			<NavigationViewItem Content="神经元" Icon="Target"/>
+			<NavigationViewItem Content="核团" Icon="Globe"/>
+			<NavigationViewItem Content="感受器" Icon="Microphone"/>
+			<NavigationViewItem Content="效应器" Icon="Volume"/>
+		</NavigationView.MenuItems>
+		<Canvas x:Name="画布" Background="White" AllowDrop="True"/><!--没有背景不能响应点击事件-->
+	</NavigationView>
+	<Page.BottomAppBar>
+		<CommandBar>
+			<AppBarButton x:Name="保存" Label="保存" Icon="Save"/>
+			<AppBarButton x:Name="打开" Label="打开" Icon="OpenFile"/>
+			<AppBarButton x:Name="另存为" Label="另存为" Icon="SaveLocal"/>
+		</CommandBar>
+	</Page.BottomAppBar>
+</Page>
