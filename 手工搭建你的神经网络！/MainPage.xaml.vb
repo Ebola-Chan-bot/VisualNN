@@ -150,6 +150,16 @@ Public NotInheritable Class MainPage
 		画布内容 = 画布.Children
 	End Sub
 
+	Private Sub 工具箱_SelectionChanged(sender As NavigationView, args As NavigationViewSelectionChangedEventArgs) Handles 工具箱.SelectionChanged
+		If args.IsSettingsSelected Then
+			设置.Visibility = Visibility.Visible
+			画布.Visibility = Visibility.Collapsed
+		Else
+			设置.Visibility = Visibility.Collapsed
+			画布.Visibility = Visibility.Visible
+		End If
+	End Sub
+
 	Private Async Sub 保存_Click(sender As Object, e As RoutedEventArgs) Handles 保存.Click
 		If 当前文件 Is Nothing Then 当前文件 = Await 保存对话框.PickSaveFileAsync
 		If 当前文件 IsNot Nothing Then 写入当前文件()

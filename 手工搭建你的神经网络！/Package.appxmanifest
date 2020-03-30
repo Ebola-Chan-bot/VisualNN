@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="b150ee6c-41f3-45bd-a811-e3194e2d57c6"
-    Publisher="CN=张天夫"
-    Version="1.0.0.0" />
+    Name="642671AC6A72D.55436413939D1"
+    Publisher="CN=C6ECC887-0CE3-4397-A2DB-DD8D66347822"
+    Version="1.0.1.0" />
 
-  <mp:PhoneIdentity PhoneProductId="b150ee6c-41f3-45bd-a811-e3194e2d57c6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="de5d60fa-7c4f-4d1b-a1c3-8fa124454c67" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>手工搭建你的神经网络！</DisplayName>
-    <PublisherDisplayName>张天夫</PublisherDisplayName>
+    <PublisherDisplayName>强盗鼠</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

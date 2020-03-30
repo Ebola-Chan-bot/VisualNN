@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-	<NavigationView x:Name="工具箱" IsSettingsVisible="False">
+	<NavigationView x:Name="工具箱">
 		<NavigationView.MenuItems>
 			<NavigationViewItem Content="移动" Icon="TouchPointer"/>
 			<NavigationViewItem Content="神经元" Icon="Target"/>
@@ -14,7 +14,39 @@
 			<NavigationViewItem Content="感受器" Icon="Microphone"/>
 			<NavigationViewItem Content="效应器" Icon="Volume"/>
 		</NavigationView.MenuItems>
-		<Canvas x:Name="画布" Background="White" AllowDrop="True"/><!--没有背景不能响应点击事件-->
+		<Grid>
+			<Canvas x:Name="画布" Background="White" AllowDrop="True" Visibility="Visible"/>
+			<!--没有背景不能响应点击事件-->
+			<Grid x:Name="设置" Visibility="Collapsed">
+				<TextBlock FontFamily="Segoe UI">
+				<Run Text="选择要添加的神经元种类，然后在画布上单击添加。"/>
+				<LineBreak/>
+				<Run Text="拖动神经元可以移动其位置。"/>
+				<LineBreak/>
+				<Run Text="特别地，将一个神经元拖到另一个神经元上，可以建立一个单向突触。"/>
+				<LineBreak/>
+				<Run Text="突触绿色端指向上游，紫色端指向下游。"/>
+				<LineBreak/>
+				<Run Text="若要删除突触、神经元，直接右击即可。"/>
+				<LineBreak/>
+				<Run Text="单击突触、神经元可以进行属性设置。"/>
+				<LineBreak/>
+				<Run Text="标签：自定义字符串，用作标记，不影响功能"/>
+				<LineBreak/>
+				<Run Text="不应期（㎳）：相对不应期，用于调整神经元两次激活之间的间隔"/>
+				<LineBreak/>
+				<Run Text="高亮期（㎳）：每次激活神经元会变红一段时间"/>
+				<LineBreak/>
+				<Run Text="激活权：增加该突触激活下游神经元的几率"/>
+				<LineBreak/>
+				<Run Text="抑制权：增加该突触抑制下游神经元的几率"/>
+				<LineBreak/>
+				<Run Text="激活学习：下游神经元激活时，突触的激活权会上升，上升量由本属性和上次上游神经元激活时间决定。上次上游激活越久远，上升量越少。"/>
+				<LineBreak/>
+				<Run Text="抑制学习：上游神经元激活时，突触的抑制权会上升，上升量由本属性和上次下游神经元激活时间决定。上次下游激活越久远，上升量越少。"/>
+				</TextBlock>
+			</Grid>
+		</Grid>
 	</NavigationView>
 	<Page.BottomAppBar>
 		<CommandBar>

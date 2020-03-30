@@ -3,6 +3,30 @@
   <PropertyGroup>
     <RootNamespace>模拟神经系统</RootNamespace>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>这是一个实验性的小玩具，放弃传统的线程策略，采用”一细胞一线程“的思想，在时序上激活，并且每个突触都有兴奋/抑制权，支持自学习。测试用途，请勿用于生产环境。示例应用”手工搭建你的神经网络！“已上架Microsoft Store。</Description>
+    <PackageLicenseFile>许可.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Silver-Fang/VisualNN</PackageProjectUrl>
+    <PackageIcon>图标.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Silver-Fang/VisualNN</RepositoryUrl>
+    <PackageReleaseNotes>1.0.0：首次发布</PackageReleaseNotes>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="模拟神经系统\**" />
+    <EmbeddedResource Remove="模拟神经系统\**" />
+    <None Remove="模拟神经系统\**" />
+    <None Include="许可.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\图标.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
